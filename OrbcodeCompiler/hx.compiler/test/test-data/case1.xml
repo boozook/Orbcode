@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+	<block x="76" id="57203D9E-5638-4600-9C12-982580D5699F" type="orb_block_kernel" y="49">
+		<field name="NAME">name</field>
+		<statement name="DO0">
+			<block type="orb_func_LEDC" id="2475D291-061B-4320-9773-70F1379AEB73">
+				<value name="COLOUR">
+					<block type="math_number" id="8E0EF760-AC28-42F5-980A-39B1EA9C8214">
+						<field name="NUM">255</field>
+					</block>
+				</value>
+				<next>
+					<block type="orb_func_backLED" id="4110FCC0-0AFB-4F48-ADEC-91631BDB6432">
+						<field name="VALUE">0</field>
+						<next>
+							<block type="orb_func_delay" id="02EB0E55-711B-4570-B1B7-84C6609A33CD">
+								<field name="TIME">1</field>
+								<next>
+									<block type="orb_func_heading" id="686C8DD9-FA4B-46C6-B3C9-B03203B57DAB">
+										<field name="VALUE">0</field>
+										<next>
+											<block type="orb_func_RGB" id="4362CDD9-685E-486A-AF94-C8AE369255F4">
+												<field name="R">255</field>
+												<field name="G">42</field>
+												<field name="B">142</field>
+												<next>
+													<block type="controls_if" id="A7776DA8-5494-49D8-95BA-46D361468E74">
+														<mutation elseif="0" else="1" />
+														<value name="IF0">
+															<block type="logic_compare_math" id="72AEEF29-E820-4FF8-A1C2-E03390EF7E62">
+																<value name="A">
+																	<block type="orb_variable_speed" id="039CBFF5-3663-4D7D-B9E5-9D3504F99752" />
+																</value>
+																<value name="B">
+																	<block type="math_number" id="E41C06CF-3C43-435F-82E9-7243D17A5B85">
+																		<field name="NUM">42</field>
+																	</block>
+																</value>
+																<field name="OP">HGH</field>
+															</block>
+														</value>
+														<statement name="DO0">
+															<block type="orb_func_heading" id="A2FCAFFF-25EC-4783-9DCE-279458FE455E">
+																<field name="VALUE">0</field>
+																<next>
+																	<block type="orb_anchor" id="E3AA17FC-EECD-49EB-907C-0773995F7C4E">
+																		<field name="NAME">id00</field>
+																	</block>
+																</next>
+															</block>
+														</statement>
+														<statement name="ELSE">
+															<block type="orb_return" id="913D15B9-2E06-41D3-87C9-B3DECC6B7186">
+																<next>
+																	<block type="orb_end" id="25023E5C-828D-48D1-AD40-3E303581DBD2" />
+																</next>
+															</block>
+														</statement>
+														<next>
+															<block type="orb_jump" id="24A626AB-6DC0-4CCE-B8DE-6B707BB162BF">
+																<next>
+																	<block type="controls_if" id="7E5CA296-AF1F-4940-85B5-FA24B9227316">
+																		<mutation elseif="0" else="0" />
+																		<value name="IF0">
+																			<block type="logic_compare_math" id="0EC828DC-FEAC-4EFD-8ECF-E627E49358EF">
+																				<value name="A">
+																					<block type="orb_variable_ctrl" id="9D4F58F5-3779-4782-8D49-C34133666867" />
+																				</value>
+																				<value name="B">
+																					<block type="orb_variable_yaw" id="6D698B99-D9C4-46B8-9654-559E645B7C2A" />
+																				</value>
+																				<field name="OP">NEQ</field>
+																			</block>
+																		</value>
+																		<statement name="DO0">
+																			<block type="orb_func_math_random" id="17456B63-13E8-4BAD-977C-D994FF6894F8" />
+																		</statement>
+																		<next>
+																			<block type="variables_set" id="E1788205-BB30-4685-B4F8-180F92BAAAEB">
+																				<value name="VALUE">
+																					<block type="variables_get" id="306F4DB3-9081-46E8-8F82-C987A5EAAFF8">
+																						<field name="VAR">BAR</field>
+																					</block>
+																				</value>
+																				<field name="VAR">FOO</field>
+																				<next>
+																					<block type="math_change" id="525352A2-A5D4-4B5F-9272-438DE00F1F4C">
+																						<value name="DELTA">
+																							<block type="variables_get" id="C39B92B5-A2D4-4617-9542-47768B43AD93">
+																								<field name="VAR">FOO</field>
+																							</block>
+																						</value>
+																						<field name="VAR">BAR</field>
+																						<next>
+																							<block type="orb_end" id="A3DD8A33-5034-4EE9-B8F8-03C2A445D896" />
+																						</next>
+																					</block>
+																				</next>
+																			</block>
+																		</next>
+																	</block>
+																</next>
+															</block>
+														</next>
+													</block>
+												</next>
+											</block>
+										</next>
+									</block>
+								</next>
+							</block>
+						</next>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+</xml>

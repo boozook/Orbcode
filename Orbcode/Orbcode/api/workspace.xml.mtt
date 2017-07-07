@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+	<block type="orb_block_kernel"/>
+	<!--<block type="orb_block_main"></block>-->
+	<!--<block type="orb_block_kernel"></block>-->
+	<!--<field name="NAME">TODO: NAME BY PROJECT</field> -->
+</xml>

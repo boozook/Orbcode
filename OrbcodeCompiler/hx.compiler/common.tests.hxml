@@ -1,0 +1,18 @@
+common.hxml
+
+-cp test
+-main fzzr.comp.test.Main
+
+
+# data for tests:
+-resource test/test-data/case1.xml@case1
+-resource test/test-data/case2.xml@case2
+-resource test/test-data/case3.xml@case3
+-resource test/test-data/case4.xml@case4
+-resource test/test-data/anchors.xml@anchors
+-resource test/test-data/prog1.xml@prog1
+-resource test/test-data/invalid-inpts.xml@invalid-inpts
+-resource test/test-data/ignored.xml@ignored
+
+# -D dump=pretty
+-debug

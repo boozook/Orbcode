@@ -1,0 +1,6 @@
+# include classes:
+--macro include('fzzr.comp')
+# --macro include('fzzr.comp.test')
+# fzzr.comp.Foo
+
+# -D HXCPP_SCRIPTABLE

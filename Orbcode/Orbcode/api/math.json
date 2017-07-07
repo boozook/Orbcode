@@ -1,0 +1,212 @@
+[
+	{
+		"type": "math_number",
+		"message0": "%1",
+		"args0": [
+			{
+				"type": "field_number",
+				"name": "NUM",
+				"text": "0",
+				"precision": 1,
+				"min": -2147483647,
+				"max": 2147483647
+			}
+		],
+		"colour": 230,
+		"output": "Number",
+		"tooltip": "A number.",
+		"helpUrl": "https://en.wikipedia.org/wiki/Number"
+	},
+	{
+		"type": "angle_block",
+		"message0": "angle: %1",
+		"args0": [
+			{
+				"type": "field_angle",
+				"name": "ANGLE",
+				"angle": 359,
+				"min": 0,
+				"max": 359,
+				"precision": 1
+			}
+		],
+		"output": "Number",
+		"colour": 230
+	},
+	{
+		"type": "math_arithmetic",
+		"message0": "%1 %2 %3",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "A",
+				"check": "Number"
+			},
+			{
+				"type": "field_dropdown",
+				"name": "OP",
+				"options": [
+					[
+						"+",
+						"ADD"
+					],
+					[
+						"-",
+						"MINUS"
+					],
+					[
+						"×",
+						"MULTIPLY"
+					],
+					[
+						"÷",
+						"DIVIDE"
+					]
+				]
+			},
+			{
+				"type": "input_value",
+				"name": "B",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Number",
+		"colour": 230,
+		"helpUrl": "https://en.wikipedia.org/wiki/Arithmetic"
+	},
+	{
+		"type": "math_number_property",
+		"message0": "%1 is %2",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "NUMBER_TO_CHECK",
+				"check": "Number"
+			},
+			{
+				"type": "field_dropdown",
+				"name": "PROPERTY",
+				"options": [
+					[
+						"even",
+						"EVEN"
+					],
+					[
+						"odd",
+						"ODD"
+					],
+					[
+						"prime",
+						"PRIME"
+					],
+					[
+						"whole",
+						"WHOLE"
+					],
+					[
+						"positive",
+						"POSITIVE"
+					],
+					[
+						"negative",
+						"NEGATIVE"
+					]
+				]
+			}
+		],
+		"inputsInline": true,
+		"colour": 230,
+		"output": "Boolean",
+		"tooltip": "Check if a number is an even, odd, prime, whole, positive, or negative. Returns true or false.",
+		"TODO(#376)": "https://github.com/google/blockly-android/issues/376"
+	},
+	{
+		"type": "math_change",
+		"message0": "change %1 by %2",
+		"args0": [
+			{
+				"type": "field_dropdown",
+				"name": "VAR",
+				"options": [
+					[ "A", "A" ],
+					[ "B", "B" ],
+					[ "C", "C" ],
+					[ "D", "D" ],
+					[ "E", "E" ],
+					[ "F", "F" ],
+					[ "G", "G" ],
+					[ "H", "H" ],
+					[ "I", "I" ],
+					[ "J", "J" ],
+					[ "K", "K" ],
+					[ "L", "L" ],
+					[ "M", "M" ],
+					[ "N", "N" ],
+					[ "O", "O" ],
+					[ "P", "P" ],
+					[ "Q", "Q" ],
+					[ "R", "R" ],
+					[ "S", "S" ],
+					[ "T", "T" ],
+					[ "U", "U" ],
+					[ "V", "V" ],
+					[ "W", "W" ],
+					[ "X", "X" ],
+					[ "Y", "Y" ]
+				]
+			},
+			{
+				"type": "input_value",
+				"name": "DELTA",
+				"check": "Number"
+			}
+		],
+		"previousStatement": null,
+		"nextStatement": null,
+		"colour": 230,
+		"helpUrl": "https://en.wikipedia.org/wiki/Programming_idiom#Incrementing_a_counter"
+	},
+	{
+		"type": "math_modulo",
+		"message0": "remainder of %1 ÷ %2",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "DIVIDEND",
+				"check": "Number"
+			},
+			{
+				"type": "input_value",
+				"name": "DIVISOR",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Number",
+		"colour": 230,
+		"tooltip": "Return the remainder from dividing the two numbers.",
+		"helpUrl": "https://en.wikipedia.org/wiki/Modulo_operation"
+	},
+	{
+		"type": "math_random_int",
+		"message0": "random integer from %1 to %2",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "FROM",
+				"check": "Number"
+			},
+			{
+				"type": "input_value",
+				"name": "TO",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Number",
+		"colour": 230,
+		"tooltip": "Return a random integer between the two specified limits, inclusive.",
+		"helpUrl": "https://en.wikipedia.org/wiki/Random_number_generation"
+	}
+]

@@ -1,0 +1,5 @@
+common.tests.hxml
+
+-neko out/test/main.n
+# -hl out/test/main.c
+# -hl out/test/main.hl

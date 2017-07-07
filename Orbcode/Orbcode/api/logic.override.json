@@ -1,0 +1,42 @@
+[
+	{
+		"type": "logic_compare",
+		"message0": "%1 %2 %3",
+		"args0": [
+			{
+				"name": "A",
+				"type": "input_value"
+			},
+			{
+				"type": "field_dropdown",
+				"name": "OP",
+				"options": [
+					[
+						"=",
+						"EQ"
+					],
+					[
+						"\u2260",
+						"NEQ"
+					],
+					[
+						">",
+						"HGH"
+					],
+					[
+						"<",
+						"LOW"
+					]
+				]
+			},
+			{
+				"name": "B",
+				"type": "input_value"
+			}
+		],
+		"inputsInline": true,
+		"output": "Boolean",
+		"colour": 220,
+		"tooltip": "math comparator"
+	}
+]

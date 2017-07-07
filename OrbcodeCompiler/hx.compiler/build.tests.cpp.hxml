@@ -1,0 +1,8 @@
+common.tests.hxml
+
+-D mac
+-D HXCPP_CPP11
+-D HXCPP_CLANG
+-D MAC_USE_CURRENT_SDK
+-D MACOSX_DEPLOYMENT_TARGET="10.7"
+-cpp out/test

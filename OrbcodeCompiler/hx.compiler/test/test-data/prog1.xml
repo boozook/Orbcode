@@ -1,0 +1,33 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+	<block type="orb_block_kernel" x="0" y="0" id="C92A5BF8-B45A-49CC-8957-0FAB402B5FC7">
+		<field name="NAME">name</field>
+		<statement name="DO0">
+			<block type="controls_if" id="0E31A8A3-C7F3-4A2B-9160-6FCBAB0CE14E">
+				<mutation elseif="0" else="1"/>
+				<value name="IF0">
+					<block type="logic_boolean" id="F125E08E-4184-40FF-AAA4-544197E46F30">
+						<field name="BOOL">TRUE</field>
+					</block>
+				</value>
+				<statement name="DO0">
+					<block type="orb_func_LEDC" id="DA23044D-5D7E-43D7-892C-1502B25C8B35">
+						<value name="COLOUR">
+							<block type="colour_predefined" id="6FA9A7B1-64F3-403B-94CB-6465DD4471D5">
+								<field name="COLOUR">1</field>
+							</block>
+						</value>
+					</block>
+				</statement>
+				<statement name="ELSE">
+					<block type="orb_func_LEDC" id="A49F73D9-3F90-4AA2-8424-37F5BFA3325F">
+						<value name="COLOUR">
+							<block type="colour_predefined" id="2E739211-75C3-4411-A335-869050A3B736">
+								<field name="COLOUR">2</field>
+							</block>
+						</value>
+					</block>
+				</statement>
+			</block>
+		</statement>
+	</block>
+</xml>

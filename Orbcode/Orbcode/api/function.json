@@ -1,0 +1,445 @@
+[
+	{
+		"type": "orb_func_data",
+		"message0": "batch set variables:",
+		"extensions": [ "orb_func_data_mutator" ],
+		"colour": 330,
+		"inputsInline": true,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "Defines a set of constant data values that can be sequentially read via the `read` statement. You can specify more than the maximum number of values (currently set to 25) and they will be ignored. When this statement is encountered, previously stored values are overwritten so it is possible to re-assign the constants during program execution.",
+		"helpUrl": ""
+	},
+	{
+		"type": "orb_func_read",
+		"message0": "batch read variables to:",
+		"extensions": [ "orb_func_read_mutator" ],
+		"colour": 330,
+		"inputsInline": false,
+		"nextStatement": null,
+		"previousStatement": null,
+		"tooltip": "Reads the next value(s) from the current data set into the specified variable(s). If you attempt to read past the end, you will get an error.",
+		"helpUrl": ""
+	},
+	{
+		"type": "orb_func_rstr",
+		"message0": "(rstr) reset batch read current index",
+		"colour": 330,
+		"nextStatement": null,
+		"previousStatement": null,
+		"tooltip": "Forces the next read statement to start back at the beginning of the current constant data set.",
+		"helpUrl": ""
+	},
+
+
+
+
+
+	{
+		"type": "orb_func_math_sqrt",
+		"message0": "square root of %1",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "VALUE",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Number",
+		"colour": 230,
+		"tooltip": "Returns the square root of any expression that follows. A negative number halts on error.",
+		"helpUrl": ""
+	},
+	{
+		"type": "orb_func_math_rnd",
+		"message0": "random from 1 to %1",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "VALUE",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Number",
+		"colour": 230,
+		"tooltip": "This returns a pseudo random number between 1 and the value provided, which can be either a literal number or an expression. Use the random statement to reseed the number generator.",
+		"helpUrl": ""
+	},
+	{
+		"type": "orb_func_math_random",
+		"message0": "random reseed",
+		"colour": 330,
+		"nextStatement": null,
+		"previousStatement": null,
+		"tooltip": "This reseeds the pseudorandom number generator based on the jitter of the sensor network. Since this operation is performed prior to the execution of an orbBasic program, you shouldn’t normally need to call this – but hey, you can if you wish.",
+		"helpUrl": ""
+	},
+	{
+		"type": "orb_func_math_abs",
+		"message0": "absolute of %1",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "VALUE",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Number",
+		"colour": 230,
+		"tooltip": "This returns the absolute value of an expression, which is always positive.",
+		"helpUrl": ""
+	},
+
+	{
+		"type": "orb_func_delay",
+		"message0": "delay %1 ms.",
+		"args0": [
+			{
+				"type": "field_number",
+				"name": "TIME",
+				"precision": 1,
+				"min": 1,
+				"max": 65535
+			}
+		],
+		"colour": 260,
+		"nextStatement": null,
+		"previousStatement": null,
+		"tooltip": "Set sleep delay in milliseconds."
+	},
+	{
+		"type": "orb_func_delay_alt",
+		"message0": "delay (ms.) %1",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "TIME",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"colour": 260,
+		"nextStatement": null,
+		"previousStatement": null,
+		"tooltip": "Set sleep delay in milliseconds. (1-65535)"
+	},
+
+
+
+	{
+		"type": "orb_func_goroll_mode",
+		"message0": "goroll mode %1",
+		"args0": [
+			{
+				"type": "field_dropdown",
+						"name": "MODE",
+						"options": [
+							[ "0: perform a controlled stop", "0" ],
+							[ "1: drive normally", "1" ],
+							[ "2: force fast rotate", "2" ]
+						]
+			}
+		],
+		"output": "GOROLL_MODE",
+		"colour": "#FFA500",
+		"tooltip": "Get the value of specified timer.",
+		"helpUrl": ""
+	},
+	{
+		"type": "orb_func_goroll",
+		"message0": "goroll with heading %1",
+		"args0": [
+			{
+				"type": "field_number",
+				"name": "HEADING",
+				"precision": 1,
+				"min": 0,
+				"max": 359,
+				"align": "RIGHT"
+			}
+		],
+		"message1": "speed %1",
+		"args1": [
+			{
+				"type": "field_number",
+				"name": "SPEED",
+				"precision": 1,
+				"min": 0,
+				"max": 255,
+				"align": "RIGHT"
+			}
+		],
+		"message2": "mode %1",
+		"args2": [
+			{
+				"type": "input_value",
+				"name": "GO",
+				"check": ["Number", "GOROLL_MODE"],
+				"align": "RIGHT"
+			}
+		],
+		"colour": "#FFA500",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This executes a roll command to the control system with the provided values of heading and speed."
+	},
+	{
+		"type": "orb_func_goroll_alt",
+		"message0": "goroll with heading %1",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "HEADING",
+				"check": ["Number"],
+				"align": "RIGHT"
+			}
+		],
+		"message1": "speed %1",
+		"args1": [
+			{
+				"type": "input_value",
+				"name": "SPEED",
+				"check": ["Number"],
+				"align": "RIGHT"
+			}
+		],
+		"message2": "mode %1",
+		"args2": [
+			{
+				"type": "input_value",
+				"name": "GO",
+				"check": ["Number", "GOROLL_MODE"],
+				"align": "RIGHT"
+			}
+		],
+		"colour": "#FFA500",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This executes a roll command to the control system with the provided values of heading and speed."
+	},
+
+
+	{
+		"type": "orb_func_heading",
+		"message0": "set heading to %1",
+		"args0": [
+			{
+				"type": "field_number",
+				"name": "VALUE",
+				"precision": 1,
+				"min": 0,
+				"max": 359
+			}
+		],
+		"colour": "#FFA500",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This assigns the current yaw heading to the provided value, in the range of 0..359."
+	},
+	{
+		"type": "orb_func_heading_alt",
+		"message0": "set heading to %1",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "VALUE",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"colour": "#FFA500",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This assigns the current yaw heading to the provided value, in the range of 0..359."
+	},
+
+
+
+	{
+    "type": "orb_func_raw_mode",
+    "message0": "driver mode %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+					"name": "MODE",
+					"options": [
+						[ "0: Off (motor is open circuit)", "0" ],
+						[ "1: Forward", "1" ],
+						[ "2: Reverse", "2" ],
+						[ "3: Brake (motor is shorted)", "3" ],
+						[ "4: Ignore (motor mode and power is left unchanged)", "4" ]
+					]
+      }
+    ],
+    "output": "RAW_MODE",
+    "colour": "#FFA500",
+    "tooltip": "Get the value of specified timer.",
+    "helpUrl": ""
+  },
+  {
+		"type": "orb_func_raw",
+		"message0": "raw drivers ctrl",
+		"message1": "Left driver:",
+		"message2": "mode = %1 speed = %2",
+		"args2": [
+			{
+				"type": "input_value",
+				"name": "Lmode",
+				"check": ["Number", "RAW_MODE"],
+				"align": "RIGHT"
+			},
+			{
+				"type": "input_value",
+				"name": "Lspeed",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"message3": "Right driver:",
+		"message4": "mode = %1 power = %2",
+		"args4": [
+			{
+				"type": "input_value",
+				"name": "Rmode",
+				"check": ["Number", "RAW_MODE"],
+				"align": "RIGHT"
+			},
+			{
+				"type": "input_value",
+				"name": "Rspeed",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"colour": "#FFA500",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "Set mode & power for drivers. Mode value from 0-4. Power value from 0-255."
+	},
+  {
+		"type": "orb_func_raw_alt",
+		"message0": "raw drivers ctrl",
+		"message1": "Left driver:",
+		"message2": "mode = %1 speed = %2",
+		"args2": [
+			{
+				"type": "input_value",
+				"name": "Lmode",
+				"check": ["Number", "RAW_MODE"],
+				"align": "RIGHT"
+			},
+			{
+				"type": "input_value",
+				"name": "Lspeed",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"message3": "Right driver:",
+		"message4": "mode = %1 power = %2",
+		"args4": [
+			{
+				"type": "input_value",
+				"name": "Rmode",
+				"check": ["Number", "RAW_MODE"],
+				"align": "RIGHT"
+			},
+			{
+				"type": "input_value",
+				"name": "Rspeed",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"colour": "#FFA500",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "Set mode & power for drivers. Mode value from 0-4. Power value from 0-255."
+	},
+
+	{
+		"type": "orb_func_locate",
+		"message0": "setup locator",
+		"message1": "x = %1",
+		"args1": [
+			{
+				"type": "field_number",
+				"name": "X",
+				"precision": 1
+			}
+		],
+		"message2": "y = %1",
+		"args2": [
+			{
+				"type": "field_number",
+				"name": "Y",
+				"precision": 1
+			}
+		],
+		"colour": "#FFFF00",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This assigns the XY position of the internal locator to the provided values. (sm.)"
+	},
+	{
+		"type": "orb_func_locate_alt",
+		"message0": "setup locator",
+		"message1": "x = %1",
+		"args1": [
+			{
+				"type": "input_value",
+				"name": "X",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"message2": "y = %1",
+		"args2": [
+			{
+				"type": "input_value",
+				"name": "Y",
+				"check": "Number",
+				"align": "RIGHT"
+			}
+		],
+		"colour": "#FFFF00",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This assigns the XY position of the internal locator to the provided values. (sm.)"
+	},
+
+
+	{
+		"type": "orb_flag_basflg",
+		"message0": "set basflg to %1",
+		"args0": [
+			{
+				"type": "field_dropdown",
+				"name": "VALUE",
+				"options": [
+					[ "BF_EXCLUSIVE_DRV", "1" ],
+					[ "BF_STEALTH", "2" ],
+					[ "BF_KEEP_LED", "4" ],
+					[ "BF_ALLOW_SOD", "8" ]
+				]
+			}
+		],
+		"colour": 0,
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This statement accepts a decimal value to assign state flags that are effective during execution of the program. If you want to set multiple flags then add up their values.\n At the end of program execution these effect of these flags is removed."
+	}
+
+]

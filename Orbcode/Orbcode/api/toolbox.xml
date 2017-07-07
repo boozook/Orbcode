@@ -1,0 +1,419 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+<!--  <category name="Main" colour="#5C81A6">-->
+<!--    <block type="orb_block_main"></block>-->
+<!--    <block type="orb_block_kernel"></block>-->
+<!--  </category>-->
+  <category name="Logic" colour="#5C81A6">
+    <block type="controls_if"></block>
+    <block type="logic_compare">
+      <field name="OP">EQ</field>
+    </block>
+    <block type="logic_compare_math">
+      <field name="OP">HGH</field>
+    </block>
+    <block type="logic_operation">
+      <field name="OP">AND</field>
+    </block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean">
+      <field name="BOOL">TRUE</field>
+    </block>
+    <!--<block type="logic_null"></block>-->
+    <!--<block type="logic_ternary"></block>-->
+  </category>
+  <category name="Flow" colour="120" custom="FLOW">
+    <!--<block type="controls_repeat_ext">
+      <value name="TIMES">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>-->
+    <!--<block type="controls_whileUntil">
+      <field name="MODE">WHILE</field>
+    </block>-->
+    <block type="controls_for_simple">
+      <field name="VAR">I</field>
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="controls_for">
+      <field name="VAR">I</field>
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <value name="BY">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <!--<block type="controls_forEach">
+      <field name="VAR">J</field>
+    </block>-->
+    <!--<block type="controls_flow_statements">
+      <field name="FLOW">BREAK</field>
+    </block>-->
+
+
+    <sep gap="8">breaks</sep>
+    <block type="orb_end"/>
+    <block type="orb_return"/>
+    <block type="orb_reset"/>
+
+
+
+
+    <sep gap="8">branching</sep>
+    <block type="orb_jump">
+      <!--
+      <value name="ANCHOR">
+        <shadow type="orb_anchor_id"/>
+      </value>
+      -->
+    </block>
+    <block type="orb_gosub">
+      <!--
+      <value name="ANCHOR">
+        <shadow type="orb_anchor_id"/>
+      </value>
+      -->
+    </block>
+    <block type="orb_jump_indexed">
+      <!--
+      <value name="ANCHOR0">
+        <shadow type="orb_anchor_id"/>
+      </value>
+      -->
+    </block>
+    <block type="orb_gosub_indexed">
+      <!--
+      <value name="ANCHOR0">
+        <shadow type="orb_anchor_id"/>
+      </value>
+      -->
+    </block>
+    <block type="orb_anchor"/>
+    <!--<block type="orb_anchor_id"/>-->
+
+
+  </category>
+
+
+  <category name="Math" colour="230">
+    <block type="math_number"/>
+    <block type="angle_block">
+      <field name="ANGLE">180</field>
+    </block>
+    <block type="math_change">
+      <value name="DELTA">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_arithmetic">
+      <value name="A">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="B">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_number_property">
+      <value name="NUMBER_TO_CHECK">
+        <shadow type="math_number">
+          <field name="NUM">42</field>
+        </shadow>
+      </value>
+      <field name="PROPERTY">2</field>
+    </block>
+    <!--<block type="math_single">
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">9</field>
+        </shadow>
+      </value>
+    </block>-->
+    <!--<block type="math_trig">
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">45</field>
+        </shadow>
+      </value>
+    </block>-->
+    <!--<block type="math_constant"></block>-->
+    <!--<block type="math_round">
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">3.1</field>
+        </shadow>
+      </value>
+    </block>-->
+    <block type="math_modulo">
+      <value name="DIVIDEND">
+        <shadow type="math_number">
+          <field name="NUM">64</field>
+        </shadow>
+      </value>
+      <value name="DIVISOR">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <!--<block type="math_constrain">
+      <value name="VALUE">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="LOW">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="HIGH">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>-->
+    <!--<block type="math_random_int">
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>-->
+    <!--<block type="math_random_float"></block>-->
+    <!-- orb math -->
+    <block type="orb_func_math_sqrt">
+      <value name="VALUE">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="orb_func_math_abs">
+      <value name="VALUE">
+        <shadow type="math_number">
+          <field name="NUM">-1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="orb_func_math_rnd">
+      <value name="VALUE">
+        <shadow type="math_number">
+          <field name="NUM">255</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="orb_func_math_random"> <!-- reseed random --> </block>
+
+
+    <sep gap="10">Sphero API</sep>
+    <block type="orb_variable_Qzero"/>
+    <block type="orb_variable_Qone"/>
+    <block type="orb_variable_Qtwo"/>
+    <block type="orb_variable_Qthree"/>
+  </category>
+
+
+
+
+
+  <!--<category name="Text" colour="#5CA68D"><block type="text"><field name="TEXT"></field></block></category>-->
+
+
+
+
+  <category name="Colour" colour="#5AA68A">
+    <block type="orb_func_RGB_alt"/>
+    <block type="orb_func_RGB"/>
+    <block type="orb_func_backLED"/>
+
+    <sep gap="10">variables</sep>
+
+    <block type="colour_picker">
+      <field name="COLOUR">#ff0000</field>
+    </block>
+    <block type="colour_rgb">
+      <value name="RED">
+        <shadow type="math_number">
+          <field name="NUM">255</field>
+        </shadow>
+      </value>
+      <value name="GREEN">
+        <shadow type="math_number">
+          <field name="NUM">42</field>
+        </shadow>
+      </value>
+      <value name="BLUE">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+
+    <sep gap="10"/>
+
+    <block type="orb_func_LEDC"/>
+    <block type="colour_predefined">
+      <field name="COLOUR">1</field>
+    </block>
+
+    <!--<block type="colour_random"/>-->
+    <!--<block type="colour_blend">
+      <value name="COLOUR1">
+        <shadow type="colour_picker">
+          <field name="COLOUR">#ff0000</field>
+        </shadow>
+      </value>
+      <value name="COLOUR2">
+        <shadow type="colour_picker">
+          <field name="COLOUR">#3333ff</field>
+        </shadow>
+      </value>
+      <value name="RATIO">
+        <shadow type="math_number">
+          <field name="NUM">0.5</field>
+        </shadow>
+      </value>
+    </block>-->
+
+    <sep gap="10">Sphero API</sep>
+    <block type="orb_variable_redval"/>
+    <block type="orb_variable_grnval"/>
+    <block type="orb_variable_bluval"/>
+  </category>
+
+
+  <!--<category name="Drive" colour="#FFCC00">-->
+  <category name="Drive" colour="#FFA500">
+    <block type="orb_func_goroll"/>
+    <block type="orb_func_goroll_alt">
+      <value name="GO">
+        <shadow type="orb_func_goroll_mode">
+          <field name="MODE">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="orb_func_goroll_mode"/>
+
+    <block type="orb_func_heading_alt"/>
+    <block type="orb_func_heading"/>
+    <block type="orb_func_raw"/>
+    <block type="orb_func_raw_alt">
+      <value name="Lmode">
+        <shadow type="orb_func_raw_mode">
+          <field name="MODE">1</field>
+        </shadow>
+      </value>
+      <value name="Rmode">
+        <shadow type="orb_func_raw_mode">
+          <field name="MODE">2</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="orb_func_raw_mode"/>
+  </category>
+
+
+
+  <category name="Time" colour="260">
+    <block type="orb_func_delay_alt"/>
+    <block type="orb_func_delay"/>
+    <block type="orb_variable_timer"/>
+    <block type="orb_variable_timer_set"/>
+    <!--TODO: enable! <block type="orb_func_sleep"/>-->
+  </category>
+
+
+
+  <!--<category name="Sensors" colour="#FFCC00">-->
+  <category name="Sensors" colour="#FFFF00">
+    <block type="orb_variable_ctrl"/>
+    <block type="orb_variable_ctrl_set"/>
+    <block type="orb_variable_accelone"/>
+    <block type="orb_variable_dshake"/>
+
+    <sep gap="10">IMU</sep>
+
+    <block type="orb_variable_speed"></block>
+    <block type="orb_variable_yaw"></block>
+    <block type="orb_variable_pitch"></block>
+    <block type="orb_variable_roll"></block>
+    <block type="orb_variable_accel"></block>
+    <block type="orb_variable_gyro"></block>
+
+    <sep gap="10">Locator</sep>
+    <block type="orb_variable_xpos"/>
+    <block type="orb_variable_ypos"/>
+    <!-- use shadow: angle_block -->
+    <block type="orb_func_locate_alt"/>
+    <block type="orb_func_locate"/>
+  </category>
+
+
+  <!-- Sphero API:: System Variables -->
+  <!--<category name="Orb Vars" colour="#A65C81"> </category>-->
+
+
+
+  <!-- Sphero API:: User Variables -->
+  <!--<category name="Variables" colour="#A65C81" custom="VARIABLE">-->
+  <category name="Variables" colour="#A65C81">
+    <block type="orb_variable_ABC"/>
+    <block type="orb_variable_ABC_set"/>
+    <sep gap="10">data / variables</sep>
+    <!--<block type="orb_variable_Z"/>-->
+    <block type="orb_func_data"/>
+    <block type="orb_func_read"/>
+    <block type="orb_func_rstr"/>
+    <!--<sep gap="10">Misc</sep>-->
+  </category>
+
+  <category name="Functions" colour="#9A5CA6" custom="PROCEDURE"></category>
+
+
+
+  <category name="Misc" colour="#444444">
+    <block type="orb_variable_isconn"/>
+    <block type="orb_variable_Vbatt"></block>
+    <block type="orb_variable_Sbatt"> <!-- vals: 1 2 3 4--> </block>
+
+    <sep gap="10">connection</sep>
+    <block type="orb_variable_cmdroll"/>
+    <block type="orb_variable_spdval"/>
+    <block type="orb_variable_hdgval"/>
+    <block type="orb_variable_cmdrgb"/>
+
+    <sep gap="10">system</sep>
+    <block type="orb_flag_basflg"/>
+  </category>
+</xml>

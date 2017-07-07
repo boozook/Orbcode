@@ -1,0 +1,4 @@
+[submodule "Blockly"]
+	path = Blockly
+	url = git@github.com:fzzr-/blockly-ios.git
+	branch = feature/coordinator

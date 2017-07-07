@@ -1,0 +1,44 @@
+[
+	{
+		"type": "logic_compare_math",
+		"message0": "%1 %2 %3",
+		"args0": [
+			{
+				"name": "A",
+				"type": "input_value",
+				"check": "Number"
+			},
+			{
+				"type": "field_dropdown",
+				"name": "OP",
+				"options": [
+					[
+						"=",
+						"EQ"
+					],
+					[
+						"\u2260",
+						"NEQ"
+					],
+					[
+						">",
+						"HGH"
+					],
+					[
+						"<",
+						"LOW"
+					]
+				]
+			},
+			{
+				"name": "B",
+				"type": "input_value",
+				"check": "Number"
+			}
+		],
+		"inputsInline": true,
+		"output": "Boolean",
+		"colour": 230,
+		"tooltip": "math comparator"
+	}
+]

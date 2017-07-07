@@ -1,0 +1,8 @@
+*/Build
+*/DerivedData
+
+OrbcodeCompiler/hx.compiler/out
+
+RobotKit.framework
+RobotUIKit.framework
+**/.vscode/cache

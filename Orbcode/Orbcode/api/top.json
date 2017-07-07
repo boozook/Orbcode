@@ -1,0 +1,38 @@
+[
+	{
+		"type": "orb_block_main",
+		"message0": "init %1",
+		"args0": [
+			{
+				"type": "input_statement",
+				"name": "DO0"
+			}
+		],
+		"colour": 290,
+		"tooltip": "Creates the main function.",
+		"helpUrl": "https://en.wikipedia.org/wiki/Procedure_%28computer_science%29"
+	},
+	{
+		"type": "orb_block_kernel",
+		"message0": "kernel %1",
+		"args0": [
+			{
+				"type": "field_input",
+				"name": "NAME",
+				"text": "name",
+				"align": "RIGHT"
+			}
+		],
+		"message1": "do %1",
+		"args1": [
+			{
+				"type": "input_statement",
+				"name": "DO0"
+			}
+		],
+		"colour": 290,
+		"hat": true,
+		"tooltip": "Creates a kernel block with no output.",
+		"helpUrl": "https://en.wikipedia.org/wiki/Procedure_%28computer_science%29"
+	}
+]

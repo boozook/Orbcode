@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+	<block x="0" id="405880F0-1673-4341-9346-7D81B8E636B0" type="orb_block_kernel" y="0">
+		<field name="NAME">name</field>
+		<statement name="DO0">
+			<block type="controls_if" id="0BDA0682-ABE1-47D9-82D4-118E28152198">
+				<mutation elseif="0" else="0" />
+				<next>
+					<block type="controls_if" id="FF3DEFE6-69EC-458F-8D85-8AE4B0B7D977">
+						<mutation elseif="0" else="0" />
+						<value name="IF0">
+							<block type="logic_compare" id="E83B45A0-4E7D-43D3-B294-D1EFE2539039">
+								<value name="B">
+									<block type="logic_operation" id="5158E923-F782-43FB-911F-4CEF9D505F87">
+										<value name="B">
+											<block type="logic_compare_math" id="E4F5C562-F3B3-4DB5-AC8D-C164A8B0687E">
+												<field name="OP">HGH</field>
+											</block>
+										</value>
+										<field name="OP">AND</field>
+									</block>
+								</value>
+								<field name="OP">EQ</field>
+							</block>
+						</value>
+						<next>
+							<block type="controls_for_simple" id="B41C37E3-F4E0-4673-8642-E1EA41B046E3">
+								<value name="FROM">
+									<shadow type="math_number" id="52F6CF8E-FF6D-47A9-BCEA-EC15AD3B63A4">
+										<field name="NUM">1</field>
+									</shadow>
+								</value>
+								<field name="VAR">I</field>
+								<value name="TO">
+									<shadow type="math_number" id="D84E6B39-3D80-455A-B77C-D6562EEECC4F">
+										<field name="NUM">10</field>
+									</shadow>
+								</value>
+								<next>
+									<block type="controls_for" id="2A52AC60-CD99-4237-ABDB-870182BE1703">
+										<value name="FROM">
+											<shadow type="math_number" id="B35E1AC1-4C2E-48A3-B3F3-6DD44780BEE5">
+												<field name="NUM">1</field>
+											</shadow>
+										</value>
+										<field name="VAR">I</field>
+										<value name="TO">
+											<shadow type="math_number" id="CB94495F-8115-4053-B553-95126F5CCCAF">
+												<field name="NUM">10</field>
+											</shadow>
+										</value>
+										<value name="BY">
+											<shadow type="math_number" id="ECA9A692-A5AC-4793-92A7-EC446D0F0E3E">
+												<field name="NUM">1</field>
+											</shadow>
+										</value>
+										<next>
+											<block type="orb_jump" id="35D03290-6B9E-4CA4-B85F-9271536A249C">
+												<next>
+													<block type="orb_gosub" id="4A2AD7C4-47C6-4D47-AD7C-74E016C8A102">
+														<next>
+															<block type="orb_jump_indexed" id="0EB46E6B-81D4-4424-8B7D-8BD7FE917846">
+																<mutation anchors="1" />
+																<next>
+																	<block type="orb_gosub_indexed" id="69CE57B9-BA16-4605-8624-BF1EFE390850">
+																		<mutation anchors="1" />
+																		<field name="VAR">A</field>
+																		<next>
+																			<block type="orb_func_RGB_alt" id="7A64EB8F-5AA3-4530-9673-885787877A84">
+																				<next>
+																					<block type="orb_func_RGB_alt" id="383EB6B2-22F0-4A27-A91F-B1F0CDB244EA">
+																						<value name="COMPONENTS">
+																							<block type="colour_rgb" id="13A91B5A-9E87-4AED-AE39-E93422538544">
+																								<value name="RED">
+																									<shadow type="math_number" id="19FE77A6-1124-4D85-B94E-5B4C465A0FA9">
+																										<field name="NUM">255</field>
+																									</shadow>
+																								</value>
+																								<value name="GREEN">
+																									<block type="math_arithmetic" id="68099624-69D7-48BE-ACFC-227DDCD65033">
+																										<value name="A">
+																											<shadow type="math_number" id="9B767266-B69D-4B1D-8EE5-6A3EF2828423">
+																												<field name="NUM">1</field>
+																											</shadow>
+																										</value>
+																										<value name="B">
+																											<shadow type="math_number" id="8600FB26-2898-4C61-86C5-B48E58AE8452">
+																												<field name="NUM">1</field>
+																											</shadow>
+																										</value>
+																										<field name="OP">ADD</field>
+																									</block>
+																									<shadow type="math_number" id="E4FA1099-46DC-412F-B6B7-4A352332EFB9">
+																										<field name="NUM">42</field>
+																									</shadow>
+																								</value>
+																								<value name="BLUE">
+																									<shadow type="math_number" id="BBBEC1F2-62D6-440F-86C2-78B9FA4EE70E">
+																										<field name="NUM">0</field>
+																									</shadow>
+																								</value>
+																							</block>
+																						</value>
+																						<next>
+																							<block type="orb_func_goroll" id="2574309E-5E9F-4209-A2A7-A6B5EB8B9997">
+																								<field name="HEADING">0</field>
+																								<field name="SPEED">0</field>
+																								<next>
+																									<block type="orb_func_goroll_alt" id="B1258607-1024-406D-A7B1-7F805845464A">
+																										<value name="GO">
+																											<shadow type="orb_func_goroll_mode" id="302647D9-54B6-48A2-BABE-2769A50764FB">
+																												<field name="MODE">1</field>
+																											</shadow>
+																										</value>
+																										<next>
+																											<block type="orb_func_heading_alt" id="EF30264E-69F1-456A-B0EB-435F04A03102">
+																												<next>
+																													<block type="orb_func_raw" id="DBEE939E-597A-42C3-8E71-C93801249A71">
+																														<next>
+																															<block type="orb_func_raw_alt" id="390DB403-2615-4615-8B4D-396431E8D080">
+																																<value name="Lmode">
+																																	<shadow type="orb_func_raw_mode" id="CB46D06B-F624-49A4-AC39-501F9919720C">
+																																		<field name="MODE">1</field>
+																																	</shadow>
+																																</value>
+																																<value name="Rmode">
+																																	<shadow type="orb_func_raw_mode" id="3FC74DCE-110A-4B89-BA66-2C223B84E3AB">
+																																		<field name="MODE">2</field>
+																																	</shadow>
+																																</value>
+																																<next>
+																																	<block type="orb_func_delay_alt" id="B05A34E2-3EE6-401F-9C64-B5E2D8986192">
+																																		<next>
+																																			<block type="orb_variable_timer_set" id="18969900-C915-4019-BFD9-C52EBCEA07F1">
+																																				<field name="TIMER">A</field>
+																																				<next>
+																																					<block type="orb_variable_ctrl_set" id="6CF0842F-B604-4791-BEBF-BEDFEE1FB183">
+																																						<next>
+																																							<block type="orb_func_locate_alt" id="3727BF5D-90CC-4D0A-952B-8B5FA5CBE5B9">
+																																								<next>
+																																									<block type="orb_variable_ABC_set" id="2F23427C-8079-4BD4-9917-95B8F809EAC7">
+																																										<field name="NAME">A</field>
+																																									</block>
+																																								</next>
+																																							</block>
+																																						</next>
+																																					</block>
+																																				</next>
+																																			</block>
+																																		</next>
+																																	</block>
+																																</next>
+																															</block>
+																														</next>
+																													</block>
+																												</next>
+																											</block>
+																										</next>
+																									</block>
+																								</next>
+																							</block>
+																						</next>
+																					</block>
+																				</next>
+																			</block>
+																		</next>
+																	</block>
+																</next>
+															</block>
+														</next>
+													</block>
+												</next>
+											</block>
+										</next>
+									</block>
+								</next>
+							</block>
+						</next>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+</xml>

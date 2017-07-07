@@ -1,0 +1,427 @@
+[
+  {
+    "type": "orb_variable_timer",
+    "message0": "timer %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+					"name": "TIMER",
+					"options": [
+						[ "A", "A" ],
+						[ "B", "B" ],
+						[ "C", "C" ]
+					]
+      }
+    ],
+    "output": "Number",
+    "colour": 260,
+    "tooltip": "Get the value of specified timer.",
+    "helpUrl": ""
+  },
+  {
+    "type": "orb_variable_timer_set",
+    "message0": "run timer %1 from %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+					"name": "TIMER",
+					"options": [
+						[ "A", "A" ],
+						[ "B", "B" ],
+						[ "C", "C" ]
+					]
+      },
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "align": "RIGHT",
+        "check": "Number"
+      }
+    ],
+		"previousStatement": null,
+    "nextStatement": null,
+    "colour": 260,
+    "tooltip": "If you assign a value greater than zero to the timer, it will count down and stop at zero. If you assign it a zero it will begin counting up and wrap at 65,535.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_ctrl",
+    "message0": "ctrl",
+    "output": "Number",
+    "colour": "#5C81A6",
+    "tooltip": "When read, this variable returns 0 if the control system if off and 1 if it is on.",
+    "helpUrl": ""
+  },
+  {
+    "type": "orb_variable_ctrl_set",
+    "message0": "set ctrl to %1",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "check": ["Boolean", "Number"]
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": "#5C81A6",
+    "tooltip": "When assigned, 0 turns off the control system and any other value turns it on.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_speed",
+    "message0": "speed",
+    "output": "Number",
+    "colour": "#CCBB44",
+    "tooltip": "Returns the approximate speed of the robot in real time. This value is the filtered average speed of both motors so there is some delay between what you see and what this returns. It is read-only and ranges from 0..255.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_yaw",
+    "message0": "yaw",
+    "output": "Number",
+    "colour": "#CCBB44",
+    "tooltip": "Returns the current heading of the robot as reported by the IMU. It is read-only and ranges from 0..359 in the usual convention of how Sphero manages headings.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_pitch",
+    "message0": "pitch",
+    "output": "Number",
+    "colour": "#CCBB44",
+    "tooltip": "Returns the current pitch angle of the robot as reported by the IMU. It is read-only and ranges from -90 when the front of Sphero is pointing straight down to +90 when it is pointing straight up.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_roll",
+    "message0": "roll",
+    "output": "Number",
+    "colour": "#CCBB44",
+    "tooltip": "Returns the current roll angle of the robot as reported by the IMU. It is read-only and ranges from -180 as Sphero rolls to the left and +180 when it rolls completely over to the right.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_accel",
+    "message0": "accel %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+					"name": "ACCEL",
+					"options": [
+						[ "X", "X" ],
+						[ "Y", "Y" ],
+						[ "Z", "Z" ]
+					]
+      }
+    ],
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "Returns the current filtered reading from the accelerometer. The range is -32768 to +32767 for full- scale, which defaults to ±8Gs. The convention is that X is the pitch axis, Y is roll and Z is yaw.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_gyro",
+    "message0": "gyro %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+					"name": "GYRO",
+					"options": [
+						[ "X", "X" ],
+						[ "Y", "Y" ],
+						[ "Z", "Z" ]
+					]
+      }
+    ],
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "Returns the current filtered reading from the rate gyro in units of 0.1 degrees/second. The range is - 20000 to +20000 for full-scale. The convention is that X is the pitch axis, Y is roll and Z is yaw.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_Vbatt",
+    "message0": "Vbatt",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "Returns the current battery voltage in 100ths of a volt, so a return value of 756 indicates 7.56V.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_Sbatt",
+    "message0": "roll",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "Returns the current state of the power system, as follows: 1=CHARGING, 2=OK, 3=LOW , 4=CRITICAL.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_cmdroll",
+    "message0": "cmdroll",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "Returns a value of 1 when a new roll command has been sent by a Bluetooth client, essentially making this a `fresh data` flag. Reading this system variable automatically sets it to zero.",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_spdval",
+    "message0": "spdval",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_hdgval",
+    "message0": "hdgval",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_cmdrgb",
+    "message0": "cmdrgb",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_redval",
+    "message0": "redval",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_grnval",
+    "message0": "grnval",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_bluval",
+    "message0": "bluval",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_isconn",
+    "message0": "isconn",
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "This variable provides real time access to the current state of a connected smartphone over Bluetooth.",
+    "helpUrl": "https://github.com/google/blockly/wiki/Variables#get"
+  },
+  {
+    "type": "orb_variable_dshake",
+    "message0": "dshake",
+    "output": "Number",
+    "colour": "#5C81A6",
+    "tooltip": "Returns a value of 1 when double-shake event has been detected. Reading this system variable automatically sets it to zero.",
+    "helpUrl": "https://github.com/google/blockly/wiki/Variables#get"
+  },
+
+
+  {
+    "type": "orb_variable_accelone",
+    "message0": "accelone",
+    "output": "Number",
+    "colour": "#FFA500",
+    "tooltip": "0-8000",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_xpos",
+    "message0": "xpos",
+    "output": "Number",
+    "colour": "#FFFF00",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_ypos",
+    "message0": "ypos",
+    "output": "Number",
+    "colour": "#FFFF00",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_Qzero",
+    "message0": "Qzero",
+    "output": "Number",
+    "colour": "#FFCC00",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_Qone",
+    "message0": "Qone",
+    "output": "Number",
+    "colour": "#FFCC00",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_Qtwo",
+    "message0": "Qtwo",
+    "output": "Number",
+    "colour": "#FFCC00",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_Qthree",
+    "message0": "Qthree",
+    "output": "Number",
+    "colour": "#FFCC00",
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+
+  {
+    "type": "orb_variable_ABC",
+    "message0": "get %1",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "NAME",
+        "options":
+        [
+          [ "A", "A" ],
+          [ "B", "B" ],
+          [ "C", "C" ],
+          [ "D", "D" ],
+          [ "E", "E" ],
+          [ "F", "F" ],
+          [ "G", "G" ],
+          [ "H", "H" ],
+          [ "I", "I" ],
+          [ "J", "J" ],
+          [ "K", "K" ],
+          [ "L", "L" ],
+          [ "M", "M" ],
+          [ "N", "N" ],
+          [ "O", "O" ],
+          [ "P", "P" ],
+          [ "Q", "Q" ],
+          [ "R", "R" ],
+          [ "S", "S" ],
+          [ "T", "T" ],
+          [ "U", "U" ],
+          [ "V", "V" ],
+          [ "W", "W" ],
+          [ "X", "X" ],
+          [ "Y", "Y" ]
+        ]
+      }
+    ],
+    "output": "Number",
+    "colour": 330,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+
+  {
+    "type": "orb_variable_ABC_set",
+    "message0": "set %1 to %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "NAME",
+        "options":
+        [
+          [ "A", "A" ],
+          [ "B", "B" ],
+          [ "C", "C" ],
+          [ "D", "D" ],
+          [ "E", "E" ],
+          [ "F", "F" ],
+          [ "G", "G" ],
+          [ "H", "H" ],
+          [ "I", "I" ],
+          [ "J", "J" ],
+          [ "K", "K" ],
+          [ "L", "L" ],
+          [ "M", "M" ],
+          [ "N", "N" ],
+          [ "O", "O" ],
+          [ "P", "P" ],
+          [ "Q", "Q" ],
+          [ "R", "R" ],
+          [ "S", "S" ],
+          [ "T", "T" ],
+          [ "U", "U" ],
+          [ "V", "V" ],
+          [ "W", "W" ],
+          [ "X", "X" ],
+          [ "Y", "Y" ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "align": "RIGHT",
+        "check": "Number"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 330,
+    "tooltip": "Direct variables are named A..Y. All variables are 32-bit signed integers yielding a range of -2,147,483,647 to +2,147,483,647.",
+    "helpUrl": ""
+  }
+]

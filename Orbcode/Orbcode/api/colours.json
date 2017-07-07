@@ -1,0 +1,201 @@
+[
+	{
+		"type": "colour_picker",
+		"message0": "%1",
+		"args0": [
+			{
+				"type": "field_colour",
+				"name": "COLOUR",
+				"colour": "#ff0000"
+			}
+		],
+		"output": "Colour",
+		"colour": "#5AA68A",
+		"tooltip": "Choose a colour from the palette.",
+		"helpUrl": "https://en.wikipedia.org/wiki/Color"
+	},
+
+	{
+		"type": "colour_predefined",
+		"message0": "colour (3bit) %1",
+		"args0": [
+			{
+				"type": "field_dropdown",
+				"name": "COLOUR",
+				"options": [
+					[ "off", "0" ],
+					[ "red", "1" ],
+					[ "green", "2" ],
+					[ "blue", "3" ],
+					[ "orange", "4" ],
+					[ "purple", "5" ],
+					[ "white", "6" ],
+					[ "yellow", "7" ],
+					[ "off", "8" ]
+				]
+			}
+		],
+		"output": "Colour8",
+		"colour": "#5AA68A",
+		"tooltip": "Choose a colour at random.",
+		"helpUrl": "http://randomcolour.com"
+	},
+
+	{
+		"type": "colour_random",
+		"message0": "random colour",
+		"args0": [],
+		"output": "Colour",
+		"colour": "#5AA68A",
+		"tooltip": "Choose a colour at random.",
+		"helpUrl": "http://randomcolour.com"
+	},
+	{
+		"type": "colour_rgb",
+		"message0": "R%1 G%2 B%3",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "RED",
+				"check": "Number",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			},
+			{
+				"type": "input_value",
+				"name": "GREEN",
+				"check": "Number",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			},
+			{
+				"type": "input_value",
+				"name": "BLUE",
+				"check": "Number",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			}
+		],
+		"colour": "#5AA68A",
+		"inputsInline": false,
+		"output": "Colour",
+		"tooltip": "Create a color value from components."
+	},
+	{
+		"type": "colour_blend",
+		"message0": "blend %1 & %2 with ratio %3",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "COLOUR1",
+				"check": "Colour"
+			},
+			{
+				"type": "input_value",
+				"name": "COLOUR2",
+				"check": "Colour"
+			},
+			{
+				"type": "input_value",
+				"name": "RATIO",
+				"check": "Number",
+				"precision": 0.1,
+				"min": 0,
+				"max": 1
+			}
+		],
+		"colour": "#5AA68A",
+		"inputsInline": true,
+		"output": "Colour",
+		"tooltip": "Create a color value from components."
+	},
+
+
+	{
+		"type": "orb_func_RGB",
+		"message0": "set LED to R%1 G%2 B%3",
+		"message1": "colour 16 bit",
+		"args0": [
+			{
+				"type": "field_number",
+				"name": "R",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			},
+			{
+				"type": "field_number",
+				"name": "G",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			},
+			{
+				"type": "field_number",
+				"name": "B",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			}
+		],
+		"colour": "#5AA68A",
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": ""
+	},
+	{
+		"type": "orb_func_RGB_alt",
+		"message0": "set LED to %1",
+		"message1": "colour 16 bit",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "COMPONENTS",
+				"check": ["Colour", "Number"]
+			}
+		],
+		"colour": "#5AA68A",
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": ""
+	},
+	{
+		"type": "orb_func_LEDC",
+		"message0": "set LED to %1",
+		"message1": "colour 3 bit",
+		"args0": [
+			{
+				"type": "input_value",
+				"name": "COLOUR",
+				"align": "RIGHT",
+				"check": [ "Number", "Colour8" ]
+			}
+		],
+		"colour": "#5AA68A",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This is like the RGB command but sets the LED to one of eight predefined colors, without requiring you to know the three component values."
+	},
+	{
+		"type": "orb_func_backLED",
+		"message0": "set backLED intensity to %1",
+		"args0": [
+			{
+				"type": "field_number",
+				"name": "VALUE",
+				"precision": 1,
+				"min": 0,
+				"max": 255
+			}
+		],
+		"colour": "#5AA68A",
+		"inputsInline": false,
+		"previousStatement": null,
+		"nextStatement": null,
+		"tooltip": "This commands the aiming LED with an intensity from 0..255."
+	}
+]

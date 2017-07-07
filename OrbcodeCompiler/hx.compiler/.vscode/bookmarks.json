@@ -1,0 +1,27 @@
+{
+	"bookmarks": [
+		{
+			"fsPath": "$ROOTPATH$/src/fzzr/comp/KernelCompiler.hx",
+			"bookmarks": [
+				629,
+				739,
+				963,
+				489,
+				642,
+				643,
+				884,
+				998,
+				1000,
+				726,
+				728,
+				729
+			]
+		},
+		{
+			"fsPath": "$ROOTPATH$/src/fzzr/comp/BlockType.hx",
+			"bookmarks": [
+				103
+			]
+		}
+	]
+}
